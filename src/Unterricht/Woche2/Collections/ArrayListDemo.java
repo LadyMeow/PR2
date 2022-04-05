@@ -12,7 +12,7 @@ public class ArrayListDemo {
         ArrayList<Osterhase> mauritius = new ArrayList<>(); // meine erste collection lebt
 
         Osterhase karl = new Osterhase(1000, "Karl von Karlingen", HasenReligion_Enum.EXTRA_BUNTE_OSTEREIER);
-        Osterhase carla = new Osterhase(111, "Karla Kolumna", HasenReligion_Enum.ZUR_HEILIGEN_KAROTTE);
+        Osterhase carla = new Osterhase(111, "Carla Kolumna", HasenReligion_Enum.ZUR_HEILIGEN_KAROTTE);
         Osterhase uschi = new Osterhase(7777, "Uschi mit den langen Ohren", HasenReligion_Enum.LANGE_OHREN_ZEUGEN);
 
         // fügen hinten elemente hinzu
