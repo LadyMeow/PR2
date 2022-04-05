@@ -1,8 +1,5 @@
 package Unterricht.Woche2.emp;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class DemoEmp {
     public static void main(String[] args) {
 
