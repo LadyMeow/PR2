@@ -8,7 +8,7 @@ public class DemoEmp {
 
         Employee nr1 = new Employee(1, "Hansi", 5000, "Musik");
         Employee nr2 = new Employee(2, "Gabi", 2500, "Büro");
-        Employee nr3 = new Employee(3, "Rosi", 3400, "Musik");
+        Employee nr3 = new Employee(3, "Rosi", 340000, "Musik");
 
         EmployeeManager mgr = new EmployeeManager(); // name unseres EmloyeeManagers
 
@@ -22,6 +22,8 @@ public class DemoEmp {
 
         System.out.println("EMP Number 3: " + mgr.findByEmpNumber(3));
         System.out.println("Department Musik: " + mgr.findByDepartment("Musik"));
+
+        System.out.println(mgr.findByMaxSalary());
 
     }
 }
