@@ -1,4 +1,6 @@
-package Unterricht.Woche1;
+package Unterricht.Woche3.Account_HashMap;
+
+import java.util.Objects;
 
 // gehört zu Klasse Bank
 public class Account {
@@ -54,4 +56,18 @@ public class Account {
                 ", accountID=" + accountID +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Account account = (Account) o;
+        return Objects.equals(iban, account.iban);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(iban);
+    }
+
 }

@@ -1,4 +1,4 @@
-package Unterricht.Woche2.emp;
+package Unterricht.Woche2.HashMap;
 
 import java.util.ArrayList;
 

@@ -1,7 +1,7 @@
 package Unterricht.Woche2.Generics;
 
 
-import Unterricht.Woche1.Account;
+import Unterricht.Woche1.Account_HashSet.Account;
 
 public class MaybeTest {
     public static void main(String[] args) {

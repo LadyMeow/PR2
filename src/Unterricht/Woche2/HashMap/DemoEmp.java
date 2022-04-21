@@ -1,4 +1,4 @@
-package Unterricht.Woche2.emp;
+package Unterricht.Woche2.HashMap;
 
 public class DemoEmp {
     public static void main(String[] args) {
