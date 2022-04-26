@@ -1,4 +1,4 @@
-package Uebungen.Beispiele1;
+package Uebungen.Beispiele1.Bsp1;
 
 public class Article {
     private String name;
