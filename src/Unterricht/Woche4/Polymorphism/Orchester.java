@@ -1,9 +1,9 @@
-package Unterricht.Woche4.Polymorphismus;
+package Unterricht.Woche4.Polymorphism;
 
 import java.util.ArrayList;
 
 public class Orchester {
-    public ArrayList<Instrument> oInstruments;
+    private ArrayList<Instrument> oInstruments;
 
     public Orchester() {
         oInstruments = new ArrayList<>();

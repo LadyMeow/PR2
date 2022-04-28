@@ -7,10 +7,6 @@ public abstract class Instrument {
         this.lautstaerke = lautstaerke;
     }
 
-    public int play() {
-        lautstaerke = 0;
-        System.out.println("Kein Instrument wird gespielt");
-        return lautstaerke;
-    }
+    public abstract int play(); // abstract methode zwingt alle extended klassen dazu diese methode zu overwriten
 
 }
