@@ -1,6 +1,8 @@
 package Unterricht.Woche4.UpDownCast;
 
-public class Hase {
+import Unterricht.Woche4.Interfaces.GoesToParty;
+
+public class Hase implements GoesToParty {
     public String name;
 
     public Hase(String name) {
@@ -19,4 +21,9 @@ public class Hase {
         System.out.println(name + " frisst");
     }
 
+    // implementiert von GoesToParty
+    @Override
+    public void party(String drink, String cake) {
+        System.out.println(name + " goes to birthday party and eats " + cake + " and drinks " + drink);
+    }
 }

@@ -1,5 +1,9 @@
 package Unterricht.Woche4.UpDownCast;
 
+import Unterricht.Woche4.Interfaces.GoesToParty;
+
+import java.util.ArrayList;
+
 public class HasenApp {
     public static void main(String[] args) {
         Hase hoppel = new Osterhase("Hoppel Oster"); // up-casting -> auf Hase
@@ -26,6 +30,16 @@ public class HasenApp {
         System.out.println();
         System.out.println("**** Was machen alle Hasen im Hasenstall? ****");
         alleHasen.alleHoppeln();
+
+        // interface example
+        ArrayList<GoesToParty> partyPeople = new ArrayList<>();
+        partyPeople.add(hasi);
+        partyPeople.add(hoppel);
+
+        for (GoesToParty p : partyPeople) {
+            p.party("Cola", "Strawberry-Cake");
+        }
+
 
     }
 }

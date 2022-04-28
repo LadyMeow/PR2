@@ -9,6 +9,9 @@ public class DemoOrchester {
         Geige ge = new Geige(4);
         Klarinette k = new Klarinette(6);
 
+        // Instrument Objekt erstellen nicht möglich, weil abstrakte Klasse
+        // upcasting geht aber weiterhin
+
         o.add(g);
         o.add(t);
         o.add(ge);
