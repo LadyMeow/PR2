@@ -1,10 +1,17 @@
 package Uebungen.Beispiele1.Bsp2;
 
-public class CrazyLabyrinth {
+import java.util.ArrayList;
 
-    public boolean checkPathConsistency(LabyrinthTile[] path) {
+public class CrazyLabyrinth {
+//    ArrayList<LabyrinthTile> path = new ArrayList<>();
+//
+//    public void addTile(LabyrinthTile t) {
+//        path.add(t);
+//    }
+
+    public static boolean checkPathConsistency(LabyrinthTile[] path) {
         boolean consistency = true;
-        for (int i = 0; i < path.length; i++) {
+        for (int i = 0; i < path.length - 1; i++) {
             if(path[i].getExit() == Direction.UP && path[i + 1].getEntry() == Direction.DOWN) {
 
             } else if(path[i].getExit() == Direction.DOWN && path[i + 1].getEntry() == Direction.UP) {
