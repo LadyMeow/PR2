@@ -22,6 +22,32 @@ public class Blackjack {
         return false;
     }
 
+    public Integer getValue(Player player) {
+        if(map.containsKey(player)) {
+            return map.get(player);
+        }
+        return null;
+    }
+
+    public Player getWinner() {
+        int highest = 0;
+        Player winner = new Player(null, 0);
+
+        for (Player p : map.keySet()) {
+            if(map.get(p) == highest) {
+                return null;
+            } else if(map.get(p) < 21 && map.get(p) > highest) {
+                highest = map.get(p);
+                winner = p;
+            }
+        }
+        if (highest == 0) {
+            return null;
+        }
+        return winner;
+    }
+
+
     @Override
     public String toString() {
         return "Blackjack{" +
