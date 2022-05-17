@@ -14,7 +14,7 @@ public class EventKalender {
 
     public Event getByTitle(String title) {
         for (Event e : events) {
-            if(e.getTitle().equals(title)) {
+            if (e.getTitle().equals(title)) {
                 return e;
             }
         }
@@ -25,7 +25,7 @@ public class EventKalender {
     public ArrayList<Event> getByOrt(String ort) {
         ArrayList<Event> result = new ArrayList<>();
         for (Event e : events) {
-            if(e.getOrt().equals(ort)) {
+            if (e.getOrt().equals(ort)) {
                 result.add(e);
             }
         }
@@ -49,7 +49,7 @@ public class EventKalender {
         Event maxE = new Event(null, null, 0);
         double maxPrice = 0;
         for (Event e : events) {
-            if(e.getOrt().equals(ort) && e.getEintrittspreis() > maxPrice) {
+            if (e.getOrt().equals(ort) && e.getEintrittspreis() > maxPrice) {
                 maxE = e;
                 maxPrice = e.getEintrittspreis();
             }
@@ -62,7 +62,7 @@ public class EventKalender {
         int count = 0;
         double sum = 0;
         for (Event e : events) {
-            if(e.getOrt().equals(ort)) {
+            if (e.getOrt().equals(ort)) {
                 count++;
                 sum += e.getEintrittspreis();
             }
@@ -82,7 +82,7 @@ public class EventKalender {
             int count = 0;
 
             for (Event e : events) {
-                if(o.equals(e.getOrt())) {
+                if (o.equals(e.getOrt())) {
                     result.put(e.getOrt(), ++count);
                 }
             }
@@ -102,7 +102,7 @@ public class EventKalender {
             double sum = 0.0;
 
             for (Event e : events) {
-                if(o.equals(e.getOrt())) {
+                if (o.equals(e.getOrt())) {
                     result.put(e.getOrt(), (sum += e.getEintrittspreis()));
                 }
             }
@@ -110,8 +110,24 @@ public class EventKalender {
 
         return result;
     }
-    //Liefert in einer HashMap den Gesamtpreis aller Veranstaltungen je Ort.
+    // Liefert in einer HashMap den Gesamtpreis aller Veranstaltungen je Ort.
 
+    // oder so: (nur eine Schleife)
+    public HashMap<String, Double> getSumPriceEventsByOrt2() {
+        HashMap<String, Double> erg = new HashMap<String, Double>();
+
+        for (Event e : events) {
+            if (erg.containsKey(e.getOrt())) {
+                // ort already in hashmap
+                erg.put(e.getOrt(), e.getEintrittspreis() + erg.get(e.getOrt()));
+            } else {
+                // ort not in hashmap
+                erg.put(e.getOrt(), e.getEintrittspreis());
+            }
+        }
+
+        return erg;
+    }
 
     @Override
     public String toString() {

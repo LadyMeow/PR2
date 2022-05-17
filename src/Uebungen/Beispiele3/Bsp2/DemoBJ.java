@@ -12,8 +12,11 @@ public class DemoBJ {
         game.addCard(p1, 8);
         game.addCard(p2, 10);
 
+
         System.out.println(game);
 
         System.out.println(game.getValue(p1));
+
+        System.out.println(game.getWinner());
     }
 }
